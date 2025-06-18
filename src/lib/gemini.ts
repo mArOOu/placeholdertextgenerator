@@ -1,7 +1,7 @@
 // This file is now unused. Use the /api/generate-funny-text API route for Gemini requests.
 
 export async function generateFunnyText(wordCount: number): Promise<string> {
-  const res = await fetch("/api/generate-funny-text", {
+  const res = await fetch("/api/placeholder-text-generator", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ wordCount }),
