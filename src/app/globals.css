@@ -1,8 +1,6 @@
-/* @tailwind directives require Tailwind CSS processing. Uncomment if using Tailwind CSS build process.
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*/
 
 :root {
   --background: #ffffff;

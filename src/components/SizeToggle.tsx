@@ -14,44 +14,48 @@ const SIZE_OPTIONS = [
   { label: "Huge (100 words)", value: 100 },
 ];
 
-const buttonBase =
-  "px-4 py-2 rounded-lg font-medium border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400";
-const selected =
-  "bg-gradient-to-r from-blue-700 to-green-600 text-white border-blue-700 shadow-lg";
-const unselected =
-  "bg-gray-800 text-blue-200 border-gray-700 hover:bg-gray-700 hover:text-white";
-
-const SizeToggle: React.FC<SizeToggleProps> = ({ size, setSize, customSize, setCustomSize }) => (
-  <div className="flex flex-wrap gap-3 items-center justify-center">
-    {SIZE_OPTIONS.map(opt => (
+const SizeToggle: React.FC<SizeToggleProps> = ({
+  size,
+  setSize,
+  customSize,
+  setCustomSize,
+}) => (
+  <div className="flex flex-wrap gap-2 items-center justify-center">
+    {SIZE_OPTIONS.map((opt) => (
       <button
         key={opt.value}
         type="button"
-        className={`${buttonBase} ${size === opt.value ? selected : unselected}`}
-        onClick={() => setSize(opt.value)}
-      >
+        className={`px-3 py-1 rounded border text-sm font-medium focus:outline-none focus:ring ${
+          size === opt.value
+            ? "bg-blue-600 text-white border-blue-600"
+            : "bg-gray-200 text-gray-800 border-gray-300"
+        }`}
+        onClick={() => setSize(opt.value)}>
         {opt.label}
       </button>
     ))}
-    <div className="flex items-center gap-2 bg-gray-800 px-3 py-2 rounded-lg border border-gray-700">
+    <div className="flex items-center gap-1 bg-gray-100 px-2 py-1 rounded border border-gray-300">
       <button
         type="button"
-        className={`${buttonBase} ${!SIZE_OPTIONS.some(opt => opt.value === size) ? selected : unselected}`}
-        onClick={() => setSize(Number(customSize) || 1)}
-      >
+        className={`px-3 py-1 rounded border text-sm font-medium focus:outline-none focus:ring ${
+          !SIZE_OPTIONS.some((opt) => opt.value === size)
+            ? "bg-blue-600 text-white border-blue-600"
+            : "bg-gray-200 text-gray-800 border-gray-300"
+        }`}
+        onClick={() => setSize(Number(customSize) || 1)}>
         Custom
       </button>
       <input
         type="number"
         min={1}
-        className="bg-gray-900 text-blue-200 border-none rounded px-2 py-1 w-20 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="bg-white text-gray-800 border rounded px-2 py-1 w-16 focus:outline-none focus:ring"
         value={customSize}
-        onChange={e => {
+        onChange={(e) => {
           setCustomSize(e.target.value);
           setSize(Number(e.target.value) || 1);
         }}
       />
-      <span className="text-blue-200">words</span>
+      <span className="text-gray-600">words</span>
     </div>
   </div>
 );

@@ -37,7 +37,7 @@ export default function Generator() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto flex flex-col items-center gap-8 bg-gray-950 bg-opacity-95 rounded-2xl p-8 shadow-2xl border border-blue-900">
+    <div className="w-full max-w-xl mx-auto flex flex-col items-center gap-6 bg-white rounded shadow p-6 border border-gray-200">
       <SizeToggle
         size={size}
         setSize={setSize}
@@ -52,7 +52,7 @@ export default function Generator() {
         onCopy={handleCopy}
       />
       {error && (
-        <div className="text-green-400 text-sm font-semibold mt-2">{error}</div>
+        <div className="text-red-500 text-sm font-semibold mt-2">{error}</div>
       )}
     </div>
   );
