@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-gradient-to-br from-gray-950 via-blue-950 to-green-950">
+    <main className="flex flex-col min-h-screen bg-blue-950">
       <Header />
       <section className="flex-1 w-full flex items-center justify-center">
         <div className="flex flex-1 items-center justify-center min-h-[70vh]">

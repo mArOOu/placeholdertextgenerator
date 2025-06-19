@@ -25,10 +25,10 @@ const SizeToggle: React.FC<SizeToggleProps> = ({
       <button
         key={opt.value}
         type="button"
-        className={`px-3 py-1 rounded border text-sm font-medium focus:outline-none focus:ring ${
+        className={`px-5 py-3 rounded border text-sm font-medium focus:outline-none focus:ring  ${
           size === opt.value
-            ? "bg-blue-600 text-white border-blue-600"
-            : "bg-gray-200 text-gray-800 border-gray-300"
+            ? "bg-blue-600 text-white hover:bg-blue-900"
+            : "bg-gray-200 text-gray-800 hover:bg-gray-300"
         }`}
         onClick={() => setSize(opt.value)}>
         {opt.label}
@@ -39,8 +39,8 @@ const SizeToggle: React.FC<SizeToggleProps> = ({
         type="button"
         className={`px-3 py-1 rounded border text-sm font-medium focus:outline-none focus:ring ${
           !SIZE_OPTIONS.some((opt) => opt.value === size)
-            ? "bg-blue-600 text-white border-blue-600"
-            : "bg-gray-200 text-gray-800 border-gray-300"
+            ? "bg-blue-600 text-white hover:bg-blue-900"
+            : "bg-gray-200 text-gray-800 hover:bg-gray-300"
         }`}
         onClick={() => setSize(Number(customSize) || 1)}>
         Custom

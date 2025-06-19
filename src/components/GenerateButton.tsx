@@ -14,7 +14,7 @@ const GenerateButton: React.FC<GenerateButtonProps> = ({
     onClick={onClick}
     disabled={loading}>
     {loading && <span className="bg-red-600"></span>}
-    Generate Funny Text
+    Generate Placeholder Text
   </button>
 );
 
