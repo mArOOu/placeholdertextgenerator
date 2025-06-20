@@ -1,6 +1,8 @@
-// This file is now unused. Use the /api/generate-funny-text API route for Gemini requests.
+// This file is now unused. Use the /api/placeholder-text-generator API route for Gemini requests.
 
-export async function generateFunnyText(wordCount: number): Promise<string> {
+export async function generatePlaceholderText(
+  wordCount: number
+): Promise<string> {
   const res = await fetch("/api/placeholder-text-generator", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

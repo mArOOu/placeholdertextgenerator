@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { generateFunnyText } from "../lib/gemini";
 import SizeToggle from "./SizeToggle";
 import GenerateButton from "./GenerateButton";
 import GeneratedText from "./GeneratedText";
+import { generatePlaceholderText } from "../lib/gemini";
 
 export default function Generator() {
   const [size, setSize] = useState(10);
@@ -19,7 +19,7 @@ export default function Generator() {
     setText("");
     setCopied(false);
     try {
-      const result = await generateFunnyText(size);
+      const result = await generatePlaceholderText(size);
       setText(result);
     } catch (e: any) {
       setError(e.message || "Failed to generate text. Please try again.");
