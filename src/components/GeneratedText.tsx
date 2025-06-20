@@ -13,11 +13,11 @@ const GeneratedText: React.FC<GeneratedTextProps> = ({
   copied,
   onCopy,
 }) => (
-  <div className="relative w-full min-h-[100px] bg-gray-100 border border-gray-300 rounded p-4 text-base text-gray-800 flex pt-10 flex-col justify-center items-center">
+  <div className="relative w-full min-h-[100px] bg-gray-100 border border-gray-300 rounded p-4 text-base text-gray-800 flex flex-col justify-center items-center pb-10">
     {text ? (
       <>
         <button
-          className="absolute top-2 right-2 bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded focus:outline-none focus:ring"
+          className="absolute bottom-2 right-2 bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded focus:outline-none focus:ring"
           title="Copy"
           onClick={(e) => {
             e.stopPropagation();
@@ -57,7 +57,7 @@ const GeneratedText: React.FC<GeneratedTextProps> = ({
       <span className="text-blue-500">Generating…</span>
     ) : (
       <span className="text-gray-400">
-        Your generated placeholder text will appear here.
+        Your placeholder text will appear here.
       </span>
     )}
   </div>

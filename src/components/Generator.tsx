@@ -37,7 +37,7 @@ export default function Generator() {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto flex flex-col items-center gap-6 bg-white rounded shadow p-6 border border-gray-200">
+    <div className="w-full max-w-xl mx-auto flex flex-col items-center gap-6 bg-gray-900 rounded shadow p-6 border border-gray-200">
       <SizeToggle
         size={size}
         setSize={setSize}

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: "Placeholder Text with Personality Generator",
     images: [
       {
-        url: "/file.svg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Placeholder Text with Personality Generator Logo",
@@ -26,9 +26,12 @@ export const metadata: Metadata = {
     title: "Placeholder Text with Personality Generator",
     description:
       "Generate quirky, self-aware placeholder text for your mockups using AI.",
-    images: ["/file.svg"],
+    images: ["/logo.png"],
   },
   metadataBase: new URL("https://your-vercel-app-url.com/"),
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
